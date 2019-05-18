@@ -160,3 +160,4 @@ dmypy.json
 *.db
 *.bak
 .env
+.vscode
