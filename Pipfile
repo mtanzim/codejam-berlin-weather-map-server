@@ -10,6 +10,8 @@ autopep8 = "*"
 apixu = {file = "https://github.com/apixu/apixu-python/archive/v0.2.0.zip"}
 python-dotenv = "*"
 pandas = "*"
+flask = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"

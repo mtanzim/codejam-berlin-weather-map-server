@@ -1,15 +1,18 @@
 
-import sqlite3
-from apixu.client import ApixuClient
 import datetime
-import os
-import pandas as pd
-from dotenv import load_dotenv
 import json
+import os
+import sqlite3
+
+import pandas as pd
+from apixu.client import ApixuClient
+from dotenv import load_dotenv
+
 load_dotenv()
 
 
 TABLE_NAME = 'weather'
+DB_NAME = 'weather_history.db'
 
 
 def generate_dates(num_days):
@@ -19,7 +22,7 @@ def generate_dates(num_days):
 
 def create_table():
 
-    conn = sqlite3.connect('weather_history.db')
+    conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
 
     c.execute(f'''CREATE TABLE IF NOT EXISTS {TABLE_NAME}
